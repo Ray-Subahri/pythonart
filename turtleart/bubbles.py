@@ -3,7 +3,7 @@ from random import randint
 
 speed(0)
 colormode(255)
-bgcolor(255, 195, 0)
+bgcolor(255, 195, 255)
 
 def turn(number):
     degree = randint(30, 170)
