@@ -1,6 +1,8 @@
 from turtle import *
 
+colormode(255)
 woerterbuch = {'I':'Ich', 'You':'Du', 'We':'Wir', 'Like':'mögen', 'Love':'lieben', 'eat':'essen', 'Cake':'Kuchen', 'Apple':'Apfel'}
+
 
 # create inverted dictionary
 def invert(olddict):
@@ -9,21 +11,25 @@ def invert(olddict):
         newdict[item[1]] = item[0]
     return newdict
 
-# translate sentence
-def translate(sentence, dictionary):
-    translated_list = []
-    sentence = sentence.split()
-    for word in sentence:
-        translated_list.append(dictionary[word])
-    translated_sentence = " ".join(translated_list)
-    return(translated_sentence)
 
 # append german grammatical cases
 def appendcases(dictionary, key, value):
     dictionary[key] = value
     return dictionary
 
-# paint heart and print "I Love You"
+
+# translate sentence
+def translate(sentence, dictionary):
+    translated_list = []
+    sentence = sentence.split()
+    for word in sentence:
+        word = word.lower()
+        translated_list.append(dictionary[word])
+    translated_sentence = " ".join(translated_list)
+    return(translated_sentence)
+
+
+# paint heart and replay
 def paintheart(sentence):
     sentence = sentence.split()
     if sentence[0] == "I":
@@ -45,15 +51,28 @@ def paintheart(sentence):
         end_fill()
         hideturtle()
         sentence = " ".join(sentence)
-        print(sentence)
+    sentence += str(" Too, Honey")
+    penup()
+    goto(0, 80)
+    color(41,253,41)
+    style = ('Verdana', 18, 'bold italic')
+    write(sentence, font=style, align='center')
     
 
-
 woerterbuch = invert(woerterbuch)
-appendcases(woerterbuch, "dich", "You")
+appendcases(woerterbuch, "ich", "I")
 appendcases(woerterbuch, "liebe", "Love")
-confession = translate("Ich liebe dich", woerterbuch)
+appendcases(woerterbuch, "dich", "You")
+#appendcases(woerterbuch, "Liebe", "Love")
+
+sayIt = textinput("Hello Darling", "Please Type: 'Ich Liebe Dich' ")
+listen()
+
+confession = translate(sayIt, woerterbuch)
 paintheart(confession)
+
+
+
 
 done()
 
