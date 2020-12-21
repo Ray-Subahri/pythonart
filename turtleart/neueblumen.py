@@ -9,7 +9,7 @@ speed(0)
 
 pensize(randint(2, 3))
 colormode(255)
-bgcolor(255,255,0)
+bgcolor(0,255,0)
 penup()
 goto(0,-550)
 pendown()
