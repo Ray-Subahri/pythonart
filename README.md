@@ -7,4 +7,3 @@ A collection of playful python graphics using the turtle library
 ![sternenhimmel](https://github.com/Ray-Subahri/pythonart/blob/main/turtleart/gifs/sternenhimmel_GIF%2023.11.2020%2021-55-08.gif)
 ![blaue_wolke](https://github.com/Ray-Subahri/pythonart/blob/main/turtleart/gifs/blaue_wolke_GIF%2023.11.2020%2021-20-21.gif)
 ![farbverlauf](https://github.com/Ray-Subahri/pythonart/blob/main/turtleart/gifs/farbverlauf_GIF%2023.11.2020%2021-37-45.gif)
-![bubbles](https://github.com/Ray-Subahri/pythonart/blob/main/turtleart/gifs/bubbles_GIF%2023.11.2020%2021-58-01.gif)
